@@ -1,0 +1,73 @@
+<!-- <section class="py-5">
+    <div class="container-fluid px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5"  *ngFor="let products of productDetails | filter:search:'title'  " >
+                <div class="card h-100 p-2 "> -->
+                    <!-- Product image-->
+                    <!-- <img style="height: 300px;" class="card-img-top" [src]="products.image" alt="No image" /> -->
+                    <!-- Product details-->
+                    <!-- <div class="card-body p-4">
+                        <div class="text-center"> -->
+                            <!-- Product name-->
+                            <!-- <h5 class="fw-bolder">{{products.title}}</h5> -->
+                            <!-- Product price-->
+                            <!-- {{products.price}} -->
+                        <!-- </div>
+                    </div> -->
+                    <!-- Product actions-->
+                    <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center row">
+                            <div class="col-6">
+                                <button (click)="addToWishlist(products)" style="float:left ;" class="btn btn-outline-dark mt-auto" routerLink="all-products" > <i class="fa-regular fa-heart"></i> Wishlist</button>
+                            </div>
+    
+
+                            
+                        </div>
+                        
+                            
+                        
+
+                       
+
+                    </div>
+                </div>
+            </div> -->
+           
+          
+           
+          
+<!--            
+        </div>
+    </div>
+</section> -->
+
+
+
+    <!-- Content Row-->
+
+
+    <!-- Navigation-->
+ 
+    <div class="row gx-4 gx-lg-5 flip-card">
+        <div class="col-md-4 mb-5 flip-card-inner" *ngFor="let products of productDetails ">
+            <div style="color: rgb(25, 1, 1);" class="card bg-dark h-100">
+                <div class="card-body flip-card-front">
+                    <h5 style="color: white;" class="fw-bolder">{{products.title}}</h5> 
+                 <img style="height:400px; width: 440px;" class="img card-img-top" [src]="products.image" alt="No image" />
+                 <div  class="text-center"> 
+                    <div style="color: white;" class="flip-card-back">
+                        {{products.price}}
+                    </div>
+                     
+                 </div>
+                </div>
+                 
+                <div  (click)="addToWishlist(products)" class="card-footer text-center"><a class="btn btn-success btn-sm" routerLink="wishlist/{{products.id}}">Wishlist</a></div>
+                <div  class="card-footer text-center"><a class="btn btn-success btn-sm" routerLink="cart">Add To Cart</a></div>
+
+
+            </div>
+        </div>
+        
+</div>
